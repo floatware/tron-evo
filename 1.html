@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html>
+  <head>
+    <title>Two.js: Blank Stage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="image_src" href="../images/logo.gif" />
+    <link rel="shortcut icon" type="image/gif" href="../images/favicon.gif">
+    <script src="url.js"></script>
+    <script src="jquery.js"></script>
+    <script src="two.js"></script>
+  </head>
+  <body>
+
+  <div id='draw-animation'></div>
+    <div class="scripts">
+      <script>
+
+var elem = document.getElementById('draw-animation');
+var two = new Two({ width: 1000, height: 1000 }).appendTo(elem);
+
+
+for(i=0; i<500; i=i+20){
+  for(j = 0; j<500; j=j+20){
+var circle = two.makeCircle(i, j, 3);
+circle.fill = '#FF8000';
+circle.stroke = 'orangered'; // Accepts all valid css color
+circle.linewidth = 3;
+  }
+}
+
+two.update();
+
+
+
+    </script>
+  </body>
+</html>
